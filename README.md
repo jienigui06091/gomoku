@@ -2,6 +2,8 @@
 
 单文件实现的五子棋，15×15 棋盘、三档 AI、悔棋、胜负高亮。**零依赖、零构建**——把 `gomoku.html` 下载下来用浏览器打开就能玩。
 
+▶ **在线试玩：<https://jienigui06091.github.io/gomoku/>**
+
 ![对局中](shots/midgame.png)
 
 ## 快速开始
@@ -66,6 +68,12 @@ node test3.cjs   # 胜利高亮连线颜色、状态文案、计分
 - 胜负动画用单个 `requestAnimationFrame` 脉冲，结束/重开时正确取消，不会泄漏
 - `window.__gomoku` 暴露状态与算法函数，方便脚本化测试
 
+## 部署
+
+仓库根目录的 `index.html` 是一个极简跳转页（`location.replace` → `gomoku.html`），这样 GitHub Pages 直接访问
+`https://jienigui06091.github.io/gomoku/` 就能进游戏；`.nojekyll` 跳过 Jekyll 处理，发布更快。
+换到别的静态托管（Cloudflare Pages、Netlify、Vercel）同样适用，无需构建配置。
+
 ## License
 
-尚未添加许可证。如需开源授权（如 MIT），可以补一个 `LICENSE` 文件。
+[MIT](LICENSE) © 2026 liumanyu
